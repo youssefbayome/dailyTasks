@@ -101,6 +101,13 @@ function parseTime(timeString) {
     return currentDate;
 }
 
+function getNextDayStartTime() {
+    const currentTime = new Date();
+    const tomorrow = new Date(currentTime);
+    tomorrow.setDate(tomorrow.getDate() + 1); // Set to tomorrow
+    tomorrow.setHours(0, 0, 0, 0); // Set to midnight
+    return tomorrow.getTime();
+}
 
 
 
@@ -136,7 +143,8 @@ function displaySchedule() {
         if (index === upcomingEventIndex) {
             row.classList.add('currentEvent') // Highlight upcoming event
         } else if (index === upcomingEventIndex + 1) {
-            row.classList.add('upcomingEvent') // Highlight current event
+            // row.classList.add('upcomingEvent') // Highlight current event
+
         } else {
             row.style.backgroundColor = ''; // Reset background color for other rows
         }
