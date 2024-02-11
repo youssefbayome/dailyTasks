@@ -1,0 +1,138 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+
+  html,
+  body {
+      font-family: 'Poppins', sans-serif;
+  }
+
+  button {
+      outline: none;
+  }
+
+  header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+  }
+
+  th,
+  td {
+      padding: 8px;
+      text-align: left;
+  }
+
+  th {
+      background-color: #f2f2f2;
+  }
+
+  tr {
+      border-radius: 8px;
+  }
+
+  tr:hover {
+      background-color: #dddddd37;
+  }
+
+  @keyframes blink {
+      0% {
+          background-color: transparent;
+      }
+
+      50% {
+          background-color: rgb(222, 222, 216);
+      }
+
+      100% {
+          background-color: transparent;
+      }
+  }
+
+  .currentEvent {
+      border-radius: 8px;
+      /* background-color: #ffffcc; */
+      animation: blink 2s infinite;
+      /* Adjust duration as needed */
+  }
+
+  .upcomingEvent {
+      background-color: #b3d9ff;
+  }
+
+  .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+  }
+
+  .floating-button:hover {
+      background-color: #0056b3;
+  }
+
+  .dark-mode {
+      background-color: #171717;
+      color: #fff
+  }
+
+  .dark-mode th,
+  td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #4d4d4d;
+  }
+
+  .dark-mode th {
+      background-color: #4d4d4d
+  }
+
+  .dark-mode tr:hover {
+      background-color: #4d4d4d;
+  }
+
+  .dark-mode .upcomingEvent {
+      background-color: #E7F6F2;
+      color: #2C3333;
+  }
+
+  .dark-mode .currentEvent {
+      background-color: #4d4d4d
+  }
+
+  @media screen and (max-width: 600px) {
+
+      table,
+      th,
+      td {
+          font-size: 14px;
+      }
+  }
+
+  /* @media (prefers-color-scheme: dark) {
+
+      html,
+      body {
+          background-color: #171717;
+          color: #fff
+      }
+
+      th {
+          background-color: #4d4d4d
+      }
+  } */
